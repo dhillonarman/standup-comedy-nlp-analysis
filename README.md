@@ -1,139 +1,69 @@
-# standup-nlp-portfolio
+standup-nlp-portfolio
+Project Overview
+In this project I demonstrate an end-to-end natural language processing (NLP) pipeline using stand-up comedy transcripts. It showcases the full workflow from data collection and cleaning to analysis, visualization, and generation. I use Python (3.8+) and common NLP libraries to process transcripts of comedy routines. The project highlights skills in web scraping, text normalization, exploratory data analysis, sentiment analysis, Markov chain text generation, and topic modeling.
+📚 Notebooks
+Data Cleaning & Transformation: I scrape stand-up comedy transcripts from web sources and clean the text data. This notebook handles text normalization steps like lowercasing, removing punctuation, and filtering unwanted content.
+Exploratory Data Analysis: I analyze word frequencies and create visualizations such as word clouds. This includes counting words, highlighting common terms, and examining profanity usage across the transcripts.
+Sentiment Analysis: I use TextBlob to compute polarity and subjectivity scores for the transcripts. The notebook plots sentiment trends and distributions to reveal how the comedic tone varies over time or between shows.
+Text Generation: I implement a Markov chain model on Ronny Chieng’s transcript to generate new text. This notebook constructs a network of probable next-word transitions and demonstrates simple NLP-based text generation.
+Topic Modeling: I apply Latent Dirichlet Allocation (LDA) using Gensim to discover themes in the comedy corpus. The notebook preprocesses the data into a document-term matrix and interprets the main topics found.
+📊 Key Visualizations
+A word cloud is used to highlight the most frequent words in the corpus. This visualization quickly shows dominant terms from the stand-up transcripts and the themes they suggest. The example word cloud below illustrates common words extracted from all cleaned transcripts: 
 
-Hi! I’m **Armandeep Singh Dhillon** ([@dhillonarman](https://github.com/dhillonarman) · he/him).  
-This repository is my end-to-end NLP showcase using stand-up comedy transcripts. It demonstrates data cleaning, EDA, sentiment analysis, topic modeling, and text generation—all in a clear, professional workflow.
+Word cloud of the most frequent terms in the stand-up comedy transcripts. To analyze sentiment, I plot how the polarity (positive/negative sentiment) of the jokes changes over time or across comedians. The sentiment trend plot shows average sentiment scores computed by TextBlob for each transcript segment. The figure below displays the overall sentiment polarity trend across the dataset: 
 
----
+Sentiment polarity trend across the stand-up transcripts. For text generation, the Markov chain model’s word transitions are visualized as a network graph. I identify the top probable next-word links from a given word, which reveals common word transitions in the text. The network graph below shows the strongest word-to-word connections inferred by the Markov model: 
 
-## 📁 Repository Structure
-
-standup-nlp-portfolio/
-├── notebooks/
-│ ├── 01_data_cleaning_transformation.ipynb
-│ ├── 02_eda.ipynb
-│ ├── 03_sentiment_analysis.ipynb
-│ ├── 04_text_generation.ipynb
-│ └── 05_topic_modelling.ipynb
-├── data/
-│ └── raw/ # Raw transcript files
-│ └── cleaned/ # Cleaned text files
-├── images/ # Screenshots & visualization samples
-│ ├── wordcloud_example.png
-│ └── sentiment_distribution.png
-├── requirements.txt
-└── README.md
-
-yaml
-Copy
-Edit
-
----
-
-## 🚀 Project Overview
-
-I collected and cleaned transcripts from popular stand-up comedians, then applied:
-
-1. **Data Cleaning & Transformation**  
-   • Web-scrape and parse raw transcripts  
-   • Normalize text, remove HTML/noise  
-   • Export clean `.txt` files  
-
-2. **Exploratory Data Analysis (EDA)**  
-   • Word counts, unique vocabulary size  
-   • Word clouds & frequency plots  
-   • Profanity & lexical diversity comparisons  
-
-3. **Sentiment Analysis**  
-   • Polarity & subjectivity with TextBlob  
-   • Per-comedian and per-segment sentiment trends  
-   • Visualize sentiment over time  
-
-4. **Text Generation**  
-   • Markov chain model trained on one transcript  
-   • Generate “new” lines in comedian’s style  
-
-5. **Topic Modeling**  
-   • LDA with Gensim to extract thematic topics  
-   • Experiment with different topic counts  
-   • Visualize top words per topic  
-
----
-
-## 📊 Key Visualizations
-
-<!-- Replace these with your actual exported images -->
-### Word Cloud Example  
-![Word Cloud](images/wordcloud_example.png)
-
-### Sentiment Distribution  
-![Sentiment Plot](images/sentiment_distribution.png)
-
----
-
-## ⚙️ Setup & Installation
-
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/dhillonarman/standup-nlp-portfolio.git
-   cd standup-nlp-portfolio
-Create & activate a virtual environment
-
-venv (pip)
-
+Network graph of top next-word transitions in the Markov chain model.
+⚙️ Setup & Installation
+Clone the repository and navigate into it:
 bash
 Copy
 Edit
-python3 -m venv env
-source env/bin/activate      # Windows: .\env\Scripts\activate
-conda
-
+git clone https://github.com/dhillonarman/standup-nlp-portfolio.git
+cd standup-nlp-portfolio
+Install Python 3.8+ if it’s not already installed.
+(Optional) Create and activate a virtual environment:
 bash
 Copy
 Edit
-conda create -n nlp-env python=3.8
-conda activate nlp-env
-Install dependencies
-
+python3 -m venv venv
+source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+or using conda:
+bash
+Copy
+Edit
+conda create -n standup-nlp python=3.8
+conda activate standup-nlp
+Install the required Python packages:
 bash
 Copy
 Edit
 pip install -r requirements.txt
-NLTK/TextBlob corpora
-
-bash
-Copy
-Edit
-python -m textblob.download_corpora
 ▶️ Running the Notebooks
-Launch Jupyter:
-
+Activate your Python virtual environment if you created one.
+Launch Jupyter Notebook from the repository directory:
 bash
 Copy
 Edit
 jupyter notebook
-Open any notebook in notebooks/, run all cells sequentially.
-
-Each notebook loads cleaned data from data/cleaned and produces visuals/results in-line.
-
+In the browser interface, open the desired .ipynb notebook (e.g., Data_Cleaning_Transformation.ipynb).
+Run the notebook cells sequentially to reproduce the analysis and see the results.
 📜 requirements.txt
+Below are the main packages listed in requirements.txt for reference. These dependencies support the data processing and analysis tasks in the project.
 text
 Copy
 Edit
 beautifulsoup4
 gensim
 jupyter
+markovify
 matplotlib
+networkx
 nltk
-numpy
 pandas
 requests
-scikit-learn
+seaborn
+scipy
 textblob
 wordcloud
-📝 (Optional) License
-I’m happy to discuss licensing—feel free to add an MIT or other license if required.
-
-Thank you for reviewing my work! If you have any questions, you can reach me via GitHub or LinkedIn.
-
-Copy
-Edit
