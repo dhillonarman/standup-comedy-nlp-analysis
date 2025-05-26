@@ -40,41 +40,45 @@ For text generation, the Markov chain model’s word transitions are visualized 
 
 ## ⚙️ Setup & Installation
 
-- Clone the repository and navigate into it:  
-  ```bash
-  git clone https://github.com/dhillonarman/standup-nlp-portfolio.git
-  cd standup-nlp-portfolio
+Clone the repository and navigate into it:
+
+```bash
+git clone https://github.com/dhillonarman/standup-nlp-portfolio.git
+cd standup-nlp-portfolio
+```
 Install Python 3.8+ if it’s not already installed.
 
 (Optional) Create and activate a virtual environment:
 
-bash
+Using venv:
+
+```bash
 Copy
 Edit
 python3 -m venv venv
-source venv/bin/activate   # On Windows use `venv\Scripts\activate`
-or using conda:
+source venv/bin/activate   # On Windows use: venv\Scripts\activate
+```
+Using conda:
 
-bash
-Copy
-Edit
+```bash
 conda create -n standup-nlp python=3.8
 conda activate standup-nlp
+```
+
 Install the required Python packages:
 
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
+```
+
 ▶️ Running the Notebooks
 Activate your Python virtual environment if you created one.
 
 Launch Jupyter Notebook from the repository directory:
 
-bash
-Copy
-Edit
+```bash
 jupyter notebook
+```
 In the browser interface, open the desired .ipynb notebook (e.g., Data_Cleaning_Transformation.ipynb).
 
 Run the notebook cells sequentially to reproduce the analysis and see the results.
@@ -82,9 +86,7 @@ Run the notebook cells sequentially to reproduce the analysis and see the result
 📜 requirements.txt
 Below are the main packages listed in requirements.txt for reference. These dependencies support the data processing and analysis tasks in the project.
 
-text
-Copy
-Edit
+```bash
 beautifulsoup4
 gensim
 jupyter
@@ -98,5 +100,4 @@ seaborn
 scipy
 textblob
 wordcloud
-Copy
-Edit
+```
