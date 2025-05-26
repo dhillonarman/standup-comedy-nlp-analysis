@@ -25,10 +25,10 @@ In this project I demonstrate an end-to-end natural language processing (NLP) pi
 
 A word cloud is used to highlight the most frequent words in the corpus. This visualization quickly shows dominant terms from the stand-up transcripts and the themes they suggest. The example word cloud below illustrates common words extracted from all cleaned transcripts:
 
-![Word Cloud Example](images/wordcloud_example.png)  
+![Word Cloud Example](images/wordcloud.png)  
 *Word cloud of the most frequent terms in the stand-up comedy transcripts.*
 
-To analyze sentiment, I plot how the polarity (positive/negative sentiment) of the jokes changes over time or across comedians. The sentiment trend plot shows average sentiment scores computed by TextBlob for each transcript segment. The figure below displays the overall sentiment polarity trend across the dataset:
+To analyze sentiment, I plot how the polarity (positive/negative sentiment) of the jokes changes over time along with subjectivity. The sentiment trend plot shows average sentiment scores computed by TextBlob for each transcript segment. The figure below displays the overall sentiment trend across the dataset:
 
 ![Sentiment Trend](images/sentiment_trend.png)  
 *Sentiment polarity trend across the stand-up transcripts.*
@@ -101,3 +101,5 @@ scipy
 textblob
 wordcloud
 ```
+## Author
+Armandeep Singh Dhillon 
